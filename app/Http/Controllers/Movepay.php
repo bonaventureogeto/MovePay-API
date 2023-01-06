@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PaymentController extends Controller
+class Movepay extends Controller
 {
     // Declare the API endpoint
-    const API_ENDPOINT = 'https://api.example.com/payments';
+    const API_ENDPOINT = 'https://account.movepay.co.ke/api/v1/sms_list';
 
     /**
      * Display a listing of the payment transactions.
