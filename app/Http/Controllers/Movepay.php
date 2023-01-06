@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Response;
 
 class Movepay extends Controller
 {
@@ -18,17 +17,21 @@ class Movepay extends Controller
     public function index()
     {
         // Send a GET request to the API endpoint
-        $response = $this->sendRequest('GET', self::API_ENDPOINT);
-
+        $response = $this->sendRequest('POST', self::API_ENDPOINT);
+        echo($response);
+        die();
         // Check if the request was successful
-        if ($response->successful()) {
+        if ($response->ok()) {
             // Get the list of transactions from the response
             $transactions = $response->json();
 
             // Return a view with the list of transactions
+            echo($transactions);
+            die();
             return view('payments.index', compact('transactions'));
         } else {
             // Return an error message
+            echo("errrrrrrrrrrrrrrrrror");
             return 'There was an error retrieving the payment transactions';
         }
     }

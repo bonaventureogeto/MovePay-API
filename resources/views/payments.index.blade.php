@@ -20,14 +20,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($transactions ?? '' as $transaction)
+                                        <!-- @foreach ($transactions ?? '' as $transaction)
                                             <tr>
                                                 <td>{{ $transaction['id'] }}</td>
                                                 <td>{{ $transaction['amount'] }}</td>
                                                 <td>{{ $transaction['status'] }}</td>
                                                 <td>{{ $transaction['date'] }}</td>
                                             </tr>
-                                        @endforeach
+                                        @endforeach -->
                                     </tbody>
                                 </table>
                             </div>
